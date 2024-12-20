@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Restaurant Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="Maincontainer">
+        <div class="Logo">
+            <img src="./Images/Logo.jpg" alt="Logo">
+        </div>
+        <div class="buttoncontainer">
+            <p><button onclick="document.getElementById('menu').style.display='block'" class="black">Menu</button></p>
+            <p><button onclick="document.getElementById('contact').style.display='block'" class="black">Contact</button></p>
+        </div>
+        <div class="Timingcontainer">
+            <p class="timing">Monday - Friday 10am - 11pm | Saturday - Sunday 8am - 11pm</p>
+            <p class="address">40, Dadar West, Mumbai</p>
+        </div>
+    </div>
+    
+    <!-- Menu Modal -->
+    <div id="menu" class="menucontainer">
+        <div class="animate-zoom">
+            <span onclick="document.getElementById('menu').style.display='none'" class="button">X</span>
+            <div class="menucontent">
+                <h1>Starter</h1>
+                <p>Tomato Soup <b>170Rs</b></p>
+                <p>Garlic Bread <b>150Rs</b></p>
+                <p>Chilli Paneer <b>290Rs</b></p>
+                <p>Paneer Tikka <b>350Rs</b></p>
+                <br>
+            </div>
+            <h1>Main Course</h1>
+            <div class="menucontent">
+                <p>Chicken Curry <b>399Rs</b></p>
+                <p>Grill Fish and Potatoes <b>800Rs</b></p>
+                <p>Italian Pizza <b>350Rs</b></p>
+                <p>Paneer Biryani <b>400Rs</b></p>
+                <br>
+            </div>
+            <h1>Desserts</h1>
+            <div class="menucontent">
+                <p>Chocolate Cake <b>350Rs</b></p>
+                <p>Fruit Salad <b>180Rs</b></p>
+                <p>Fruit Juice <b>250Rs</b></p>   
+                <p>Ice Cream <b>230Rs</b></p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Contact Modal -->
+    <div id="contact" class="contactcontainer">
+        <div class="animate-zoom">
+            <span onclick="document.getElementById('contact').style.display='none'" class="button">X</span> 
+            <div class="contactcontent">
+                <h1>Reserve and Order Food</h1>
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name"><br><br>
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone"><br><br>
+                    <label for="order">Order:</label>
+                    <textarea id="order" name="order"></textarea><br><br>
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date"><br><br>
+                    <label for="time">Time:</label>
+                    <input type="time" id="time" name="time"><br><br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
